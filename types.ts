@@ -251,3 +251,14 @@ export interface Booking {
   totalAmount: number;
   escrowStatus: 'held' | 'released' | 'refunded';
 }
+
+// Dashboard metrics for user profile modal
+export type UserDashboardStats = {
+  totalEarnings: number;
+  totalBookings: number;
+  avgBookingsPerMonth: number;
+  totalReviews: number;
+  averageRating: number;
+  lastBookingDate?: string;
+  topActivity?: string;
+};
