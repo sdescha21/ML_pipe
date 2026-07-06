@@ -1,0 +1,8 @@
+{
+    "editor.codeActionWidget.includeNearbyQuickFixes": true,
+    "editor.quickSuggestions": {
+        "other": "offWhenInlineCompletions",
+        "comments": "off",
+        "strings": "off"
+    }
+}
