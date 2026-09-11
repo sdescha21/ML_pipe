@@ -1,0 +1,293 @@
+{
+  "expectations": [
+    {
+      "id": "abdf0cb2-387e-4904-8da6-72404c035ab2",
+      "kwargs": {
+        "column": "customerID"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "c12a8eda-fd8c-42ac-b32b-fa90f5dcd646",
+      "kwargs": {
+        "column": "churn"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "e6996504-2ba4-4c15-a551-6b60a2ef438c",
+      "kwargs": {
+        "column": "tenure",
+        "max_value": 72.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "a65c1636-98dd-404b-a60e-aa84184285ff",
+      "kwargs": {
+        "column": "MonthlyCharges",
+        "max_value": 118.75,
+        "min_value": 18.25
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "67c38ce6-1e58-4274-8f2a-5b653874ac21",
+      "kwargs": {
+        "column": "TotalCharges",
+        "max_value": 8684.8,
+        "min_value": 18.8
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "d7382189-3e05-40d1-892d-75830d86a132",
+      "kwargs": {
+        "column": "gender",
+        "value_set": [
+          "Female",
+          "Male"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "4d5a748b-1cf9-47b8-8445-5abe984c8e53",
+      "kwargs": {
+        "column": "Partner",
+        "value_set": [
+          "Yes",
+          "No"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "3c88d0d1-e942-4f36-8fe9-86b7ac01a73c",
+      "kwargs": {
+        "column": "Dependents",
+        "value_set": [
+          "No",
+          "Yes"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "e6b57a6c-f8b4-4433-b3cd-09b4b1d6d0e7",
+      "kwargs": {
+        "column": "PhoneService",
+        "value_set": [
+          "No",
+          "Yes"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "fc53deea-7bcd-4286-878b-0147bed4d784",
+      "kwargs": {
+        "column": "MultipleLines",
+        "value_set": [
+          "No phone service",
+          "No",
+          "Yes"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "92981304-21fb-41d8-aa3d-6a4f739d12f5",
+      "kwargs": {
+        "column": "InternetService",
+        "value_set": [
+          "DSL",
+          "Fiber optic",
+          "No"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "c3846f0a-2213-48a4-9a79-c1950b748615",
+      "kwargs": {
+        "column": "OnlineSecurity",
+        "value_set": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "6513254b-42ba-444d-a484-c61773b6c94e",
+      "kwargs": {
+        "column": "OnlineBackup",
+        "value_set": [
+          "Yes",
+          "No",
+          "No internet service"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "b6c1d933-3b9a-4349-a8b5-cc7149259ab5",
+      "kwargs": {
+        "column": "SeniorCitizen",
+        "value_set": [
+          0,
+          1
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "5a88d4ca-77ed-4453-8f9d-43926c96b2dd",
+      "kwargs": {
+        "column": "DeviceProtection",
+        "value_set": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "758d1271-b316-4b58-823f-11352bde5577",
+      "kwargs": {
+        "column": "TechSupport",
+        "value_set": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "a45fdba9-ad17-463c-8e1c-286879c54d17",
+      "kwargs": {
+        "column": "StreamingTV",
+        "value_set": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "af499c92-fe80-488d-9d1d-5044a6bcf08d",
+      "kwargs": {
+        "column": "StreamingMovies",
+        "value_set": [
+          "No",
+          "Yes",
+          "No internet service"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "3582d5ab-4464-499e-a237-4421cd87b1a2",
+      "kwargs": {
+        "column": "Contract",
+        "value_set": [
+          "Month-to-month",
+          "One year",
+          "Two year"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "8efe9fab-3034-450b-accf-62c842d51fac",
+      "kwargs": {
+        "column": "PaperlessBilling",
+        "value_set": [
+          "Yes",
+          "No"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "8ada1d32-f5c0-4768-84a1-c343da85c132",
+      "kwargs": {
+        "column": "PaymentMethod",
+        "value_set": [
+          "Electronic check",
+          "Mailed check",
+          "Bank transfer (automatic)",
+          "Credit card (automatic)"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "b52db8d0-3f89-4a5e-9d0a-e85cb6a2ae62",
+      "kwargs": {
+        "column": "Churn",
+        "value_set": [
+          "No",
+          "Yes"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    }
+  ],
+  "id": "9bf73960-f2ca-4056-bf32-e68d2d8e14b4",
+  "meta": {
+    "great_expectations_version": "1.20.0"
+  },
+  "name": "telco_expectations",
+  "notes": null
+}

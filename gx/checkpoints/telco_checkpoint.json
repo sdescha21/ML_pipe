@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "8393f2d7-e782-4849-8f68-b044ec06ece4",
+  "name": "telco_checkpoint",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "bb028834-3fe3-4bc6-8af6-2b89ece8e0ed",
+      "name": "telco_validation"
+    }
+  ]
+}

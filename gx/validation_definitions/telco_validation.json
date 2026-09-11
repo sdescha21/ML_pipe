@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "2266c1c6-8c1f-49ae-9022-699633fb915a",
+      "name": "Telco-Customer-Churn"
+    },
+    "batch_definition": {
+      "id": "6cca0c33-36a6-4f37-9c44-f54073821364",
+      "name": "Telco-batch"
+    },
+    "datasource": {
+      "id": "f3a997c6-0fa0-4503-96c1-d1f928e1189b",
+      "name": "pandas"
+    }
+  },
+  "id": "bb028834-3fe3-4bc6-8af6-2b89ece8e0ed",
+  "name": "telco_validation",
+  "suite": {
+    "id": "9bf73960-f2ca-4056-bf32-e68d2d8e14b4",
+    "name": "telco_expectations"
+  }
+}
