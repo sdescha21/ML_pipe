@@ -1,7 +1,7 @@
 {
   "expectations": [
     {
-      "id": "abdf0cb2-387e-4904-8da6-72404c035ab2",
+      "id": "1e92b8c2-286a-494d-81a8-28610b100869",
       "kwargs": {
         "column": "customerID"
       },
@@ -10,7 +10,7 @@
       "type": "expect_column_values_to_not_be_null"
     },
     {
-      "id": "c12a8eda-fd8c-42ac-b32b-fa90f5dcd646",
+      "id": "e6dedde8-0480-4dbf-97e2-d73a19649daa",
       "kwargs": {
         "column": "churn"
       },
@@ -19,7 +19,16 @@
       "type": "expect_column_values_to_not_be_null"
     },
     {
-      "id": "e6996504-2ba4-4c15-a551-6b60a2ef438c",
+      "id": "74b59193-7fd5-471f-863d-9bff3d69484f",
+      "kwargs": {
+        "column": "customerID"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "900aa1a4-772b-41f4-90b8-37ef1bba8cc5",
       "kwargs": {
         "column": "tenure",
         "max_value": 72.0,
@@ -30,7 +39,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "a65c1636-98dd-404b-a60e-aa84184285ff",
+      "id": "de42ba73-b7a3-4d13-87d2-f58b98264c29",
       "kwargs": {
         "column": "MonthlyCharges",
         "max_value": 118.75,
@@ -41,7 +50,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "67c38ce6-1e58-4274-8f2a-5b653874ac21",
+      "id": "912baf70-2586-4a3a-b7b2-bc540466eb92",
       "kwargs": {
         "column": "TotalCharges",
         "max_value": 8684.8,
@@ -52,7 +61,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "d7382189-3e05-40d1-892d-75830d86a132",
+      "id": "0efd4617-26c3-4e3e-a0ee-0c1b010efa2c",
       "kwargs": {
         "column": "gender",
         "value_set": [
@@ -65,7 +74,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "4d5a748b-1cf9-47b8-8445-5abe984c8e53",
+      "id": "040df41b-f862-4459-99de-14d78c1bc598",
       "kwargs": {
         "column": "Partner",
         "value_set": [
@@ -78,7 +87,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "3c88d0d1-e942-4f36-8fe9-86b7ac01a73c",
+      "id": "3cddf79b-68ae-4127-8f03-f88f9b8ab58a",
       "kwargs": {
         "column": "Dependents",
         "value_set": [
@@ -91,7 +100,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "e6b57a6c-f8b4-4433-b3cd-09b4b1d6d0e7",
+      "id": "c94d2d69-58f1-4a22-aaf8-6b274982d907",
       "kwargs": {
         "column": "PhoneService",
         "value_set": [
@@ -104,7 +113,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "fc53deea-7bcd-4286-878b-0147bed4d784",
+      "id": "8b57142c-561f-49f0-8b10-cc24a15ffabf",
       "kwargs": {
         "column": "MultipleLines",
         "value_set": [
@@ -118,7 +127,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "92981304-21fb-41d8-aa3d-6a4f739d12f5",
+      "id": "68890bea-6459-4eaa-bb34-962d99c1ec5b",
       "kwargs": {
         "column": "InternetService",
         "value_set": [
@@ -132,7 +141,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "c3846f0a-2213-48a4-9a79-c1950b748615",
+      "id": "c309d09e-e446-411e-90e0-8368d0f103bd",
       "kwargs": {
         "column": "OnlineSecurity",
         "value_set": [
@@ -146,7 +155,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "6513254b-42ba-444d-a484-c61773b6c94e",
+      "id": "cbffd5f1-7c63-4e67-8c20-25c204313b53",
       "kwargs": {
         "column": "OnlineBackup",
         "value_set": [
@@ -160,7 +169,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "b6c1d933-3b9a-4349-a8b5-cc7149259ab5",
+      "id": "d708e0e6-0cc5-4cc9-82a0-cd374956b3d3",
       "kwargs": {
         "column": "SeniorCitizen",
         "value_set": [
@@ -173,7 +182,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "5a88d4ca-77ed-4453-8f9d-43926c96b2dd",
+      "id": "86fcd834-3db6-42f1-82a6-0efeff502833",
       "kwargs": {
         "column": "DeviceProtection",
         "value_set": [
@@ -187,7 +196,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "758d1271-b316-4b58-823f-11352bde5577",
+      "id": "792df8de-c3b4-4d69-9bd6-9b6068ba67d9",
       "kwargs": {
         "column": "TechSupport",
         "value_set": [
@@ -201,7 +210,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "a45fdba9-ad17-463c-8e1c-286879c54d17",
+      "id": "ab328a0d-27a3-4232-91da-ed10dd066929",
       "kwargs": {
         "column": "StreamingTV",
         "value_set": [
@@ -215,7 +224,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "af499c92-fe80-488d-9d1d-5044a6bcf08d",
+      "id": "3dbc4e75-3e47-4b2e-89a1-6a62a20c58e1",
       "kwargs": {
         "column": "StreamingMovies",
         "value_set": [
@@ -229,7 +238,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "3582d5ab-4464-499e-a237-4421cd87b1a2",
+      "id": "42c7f41f-a8c9-4e72-b385-00c545061191",
       "kwargs": {
         "column": "Contract",
         "value_set": [
@@ -243,7 +252,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "8efe9fab-3034-450b-accf-62c842d51fac",
+      "id": "d92f710d-6d4c-4286-8fde-8ea3ba072af8",
       "kwargs": {
         "column": "PaperlessBilling",
         "value_set": [
@@ -256,7 +265,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "8ada1d32-f5c0-4768-84a1-c343da85c132",
+      "id": "d5873d80-c8d5-4198-ae78-1b2cb7847ebd",
       "kwargs": {
         "column": "PaymentMethod",
         "value_set": [
@@ -271,7 +280,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "b52db8d0-3f89-4a5e-9d0a-e85cb6a2ae62",
+      "id": "d1c41a3d-ae5b-4b9d-9fb7-3a43cb3f8d28",
       "kwargs": {
         "column": "Churn",
         "value_set": [
