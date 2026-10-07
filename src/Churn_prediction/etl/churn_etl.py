@@ -13,9 +13,9 @@ import json
 
 
 # replace args.input and args.output predefined for testing purposes
-project_root = Path.cwd().parent
+project_root = Path.cwd().parents[2]
 
-input = project_root / "src" / "data" / "raw" / "Telco-Customer-Churn.csv"
+input = project_root / "data" / "raw" / "Telco-Customer-Churn.csv"
 output = project_root / "data" / "data_quality" / "processed_data" / "Telco_Customer_Churn_interim.csv"
 
 
@@ -93,7 +93,7 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def upload_data(df: pd.DataFrame, output_path: Path) -> None:
-        """Saves the transformed dataframe to the destination."""
+    """Saves the transformed dataframe to the destination."""
     logger.info(f"Starting upload to: {output_path}")
 
     output_path.parent.mkdir(parents = True, exist_ok = True)
