@@ -3,3 +3,6 @@ Companion repo containing similar pipeline structures used for Wevsocial, with s
 
 Project #1 -> Customer Churn prediction
 Develop end-to-end pipeline for connecting to cloud db (Supabase), ingesting data, preprocessing, model testing
+Steps:
+1.   Data Validation using Great Expectations -> data/data_quality/run_validation_gx.py
+    
