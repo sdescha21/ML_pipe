@@ -119,7 +119,7 @@ def ensure_correct_data_types(df: pd.DataFrame, config: PipelineConfig) -> pd.Da
     return df
 
 def remove_outliers(df: pd.DataFrame, numerical_cols: List[str], outlier_std_threshold: float) -> pd.DataFrame:
-    """Remove outliers from the DataFrame based on z-score threshold."""
+    """Remove outliers from the DataFrame (numerical cols only) based on z-score threshold."""
     logger = logging.getLogger(__name__)
     initial_shape = df.shape
 
@@ -128,7 +128,7 @@ def remove_outliers(df: pd.DataFrame, numerical_cols: List[str], outlier_std_thr
             mean = df[col].mean()
             std_dev = df[col].std()
             z_scores = (df[col] - mean) / std_dev
-            df = df[np.abs(z_scores) < threshold]
+            df = df[np.abs(z_scores) < outlier_std_threshold]
             logger.info(f"Removed outliers from column '{col}' using z-score threshold {outlier_std_threshold}. New shape: {df.shape}.")
         else:
             logger.warning(f"Numerical column '{col}' not found in DataFrame.")
@@ -151,7 +151,52 @@ def save_data(df: pd.DataFrame, output_path: Path) -> None:
 # ===============================
 
 def run_pipeline(config: PipelineConfig) -> None:
+    logger = logging.getLogger(__name__)
+    logger.info("="*50)
+    logger.info("STARTING DATA CLEANING PIPELINE")
+    logger.info("="*50)
+
+    #1 setup
+    set_global_seeds(config.random_seed)
+
+    #2. Load data
+    df = load_data(config.raw_data_path)
+
+    #3. Clean and transform
+    df = drop_duplicates_and_ids(df, config.id_column)
+    df = ensure_correct_data_types(df, config)
+    df = remove_outliers(df, config.numerical_cols, config.outlier_std_threshold)
+
+    #4. save cleaned data
+    save_data(df, config.cleaned_data_path)
+
+    logger.info("="*50)
+    logger.info("DATA CLEANING PIPELINE COMPLETED SUCCESSFULLY")
+    logger.info("="*50)
+
+if __name__ == "__main__":
+    setup_logging()
+    #pipeline_config = PipelineConfig()
+
+    parser = argparse.ArgumentParser(description="Data cleaning pipeline")
+    parser.add_argument("--raw-data", type=Path, default = PipelineConfig.raw_data_path, help="Path to the raw data CSV file")
+    parser.add_argument("--outlier-threshold", type = float, default = PipelineConfig.outlier_std_threshold, help="Z-score threshold for outlier removal")
+
+    args = parser.parse_args()
+
+    pipeline_config = PipelineConfig(
+        raw_data_path = args.raw_data,
+        outlier_std_threshold = args.outlier_threshold
+    )
+
+    try:
+        main(pipeline_config)
+    except Exception as e:
+        logging.exception(f"Pipeline failed: {e}")
+        sys.exit(1)
     
+    
+    #run_pipeline(pipeline_config)
 
 
 
